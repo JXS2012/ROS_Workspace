@@ -1,8 +1,0 @@
-<!-- MAV Ctrl Interface nodelet publisher -->
-<library path="lib/libctrl_interface_nodelet">
-  <class name="mav_ctrl_interface/CtrlInterfaceNodelet" type="CtrlInterfaceNodelet" base_class_type="nodelet::Nodelet">
-    <description>
-      MAV Ctrl Interface nodelet publisher.
-    </description>
-  </class>
-</library>
