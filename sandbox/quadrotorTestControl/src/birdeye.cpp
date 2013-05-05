@@ -34,8 +34,12 @@ void birdeye::initiation()
 
 void birdeye::init_parameters()
 {
-  flight_radius = 500;
+  flight_radius = 300;
   freq = 30;
+
+  lostVicon = false;
+  freezeCounter = 0;
+
   zeroVector.x = 0;
   zeroVector.y = 0;
   zeroVector.z = 0;
@@ -144,10 +148,30 @@ void birdeye::updateFlightStatus()
   
   //calculate velocity using one step differentiate, can be improved by moving average method.
   currentVel = scalarProduct(freq, vectorMinus(currentPoint,prePoint));
+  viconLostHandle();
   
   prePoint = currentPoint;
-
   flightLog();
+}
+
+void birdeye::viconLostHandle()
+{
+  //when vicon recovered, recalculate currentVel using current point and last valid point, divided by duration of vicon lost
+  if (lostVicon && (currentVel.x != 0 || currentVel.y != 0 || currentVel.z != 0))
+    {
+      currentVel = scalarProduct(freq/freezeCounter, vectorMinus(currentPoint,prePoint));
+      freezeCounter = 0;
+    }
+
+  //detect vicon lost and measure the duration of vicon lost
+  if (currentVel.x == 0 && currentVel.y == 0 && currentVel.z ==0)
+    {
+      lostVicon = true;
+      freezeCounter ++;
+    }
+  else
+    lostVicon = false;  
+
 }
 
 void birdeye::updateIntError(pcl::PointXYZ targetPoint)

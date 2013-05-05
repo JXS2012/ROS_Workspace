@@ -146,6 +146,8 @@ void birdeye::updateFlightStatus()
   currentVel = scalarProduct(freq, vectorMinus(currentPoint,prePoint));
   
   prePoint = currentPoint;
+
+  flightLog();
 }
 
 void birdeye::updateIntError(pcl::PointXYZ targetPoint)
@@ -197,6 +199,16 @@ void birdeye::calculate_position_velocity_error()
 	}
       
     }
+}
+
+pcl::PointXYZ birdeye::getShiftedOrigin()
+{
+  return shiftedOrigin;
+}
+
+pcl::PointXYZ birdeye::getStartPoint()
+{
+  return cloud->points[0];
 }
 
 pcl::PointXYZ birdeye::getCurrentPoint()
@@ -277,4 +289,9 @@ float birdeye::getLog_theta(int i)
 float birdeye::getLog_psi(int i)
 {
   return psi_log[i];
+}
+
+int birdeye::getLogSize()
+{
+  return x_log.size();
 }

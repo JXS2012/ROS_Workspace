@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+../include/birdeye.h
+ros/ros.h
+-
+tf/transform_listener.h
+-
+tf/tf.h
+-
+LinearMath/btMatrix3x3.h
+-
+pcl/point_cloud.h
+-
+pcl/kdtree/kdtree_flann.h
+-
+vector_computation.h
+../include/vector_computation.h
+math.h
+../include/math.h
+sstream
+-
+vector
+-
+stdio.h
+-
+
 ../include/dummybird.h
 ros/ros.h
 -
@@ -24,15 +48,11 @@ math.h
 vector
 -
 
-../include/smartbird.h
+../include/highbird.h
 ros/ros.h
 -
-tf/transform_listener.h
--
-tf/tf.h
--
-LinearMath/btMatrix3x3.h
--
+birdeye.h
+../include/birdeye.h
 dummybird.h
 ../include/dummybird.h
 pcl/point_cloud.h
@@ -41,8 +61,6 @@ pcl/kdtree/kdtree_flann.h
 -
 vector_computation.h
 ../include/vector_computation.h
-std_msgs/Float64.h
-../include/std_msgs/Float64.h
 math.h
 ../include/math.h
 sstream
@@ -109,8 +127,8 @@ ros/service_traits.h
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/src/quadSmart.cpp
 ros/ros.h
 -
-smartbird.h
-/home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/src/smartbird.h
+highbird.h
+/home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/src/highbird.h
 
 /opt/ros/electric/stacks/bullet/include/LinearMath/btMatrix3x3.h
 btVector3.h

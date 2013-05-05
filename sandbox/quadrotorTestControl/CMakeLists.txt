@@ -43,11 +43,11 @@ rosbuild_add_library(highbird src/highbird.cpp)
 target_link_libraries(highbird dummybird)
 target_link_libraries(highbird birdeye)
 
-rosbuild_add_library(smartbird src/smartbird.cpp)
-target_link_libraries(smartbird dummybird)
+#rosbuild_add_library(smartbird src/smartbird.cpp)
+#target_link_libraries(smartbird dummybird)
 
 rosbuild_add_executable(quadSmart src/quadSmart.cpp)
-target_link_libraries(quadSmart smartbird)
+target_link_libraries(quadSmart highbird)
 
 #rosbuild_add_executable(quadFlight src/quadFlight.cpp)
 #target_link_libraries(quadFlight quadrotor)

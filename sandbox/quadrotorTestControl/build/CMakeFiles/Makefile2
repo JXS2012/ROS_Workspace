@@ -318,7 +318,7 @@ clean: CMakeFiles/highbird.dir/clean
 
 # All Build rule for target.
 CMakeFiles/quadSmart.dir/all: CMakeFiles/rosbuild_precompile.dir/all
-CMakeFiles/quadSmart.dir/all: CMakeFiles/smartbird.dir/all
+CMakeFiles/quadSmart.dir/all: CMakeFiles/highbird.dir/all
 	$(MAKE) -f CMakeFiles/quadSmart.dir/build.make CMakeFiles/quadSmart.dir/depend
 	$(MAKE) -f CMakeFiles/quadSmart.dir/build.make CMakeFiles/quadSmart.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles  4
@@ -331,7 +331,7 @@ all: CMakeFiles/quadSmart.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/quadSmart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/quadSmart.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles 0
 .PHONY : CMakeFiles/quadSmart.dir/rule
@@ -507,42 +507,6 @@ clean: CMakeFiles/rospack_gensrv.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/smartbird.dir
-
-# All Build rule for target.
-CMakeFiles/smartbird.dir/all: CMakeFiles/rosbuild_precompile.dir/all
-CMakeFiles/smartbird.dir/all: CMakeFiles/dummybird.dir/all
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/depend
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles  5
-	@echo "Built target smartbird"
-.PHONY : CMakeFiles/smartbird.dir/all
-
-# Include target in all.
-all: CMakeFiles/smartbird.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/smartbird.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/smartbird.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles 0
-.PHONY : CMakeFiles/smartbird.dir/rule
-
-# Convenience name for target.
-smartbird: CMakeFiles/smartbird.dir/rule
-.PHONY : smartbird
-
-# clean rule for target.
-CMakeFiles/smartbird.dir/clean:
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/clean
-.PHONY : CMakeFiles/smartbird.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/smartbird.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
@@ -704,7 +668,7 @@ clean: CMakeFiles/tests.dir/clean
 CMakeFiles/vector_computation.dir/all: CMakeFiles/rosbuild_precompile.dir/all
 	$(MAKE) -f CMakeFiles/vector_computation.dir/build.make CMakeFiles/vector_computation.dir/depend
 	$(MAKE) -f CMakeFiles/vector_computation.dir/build.make CMakeFiles/vector_computation.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles  5
 	@echo "Built target vector_computation"
 .PHONY : CMakeFiles/vector_computation.dir/all
 

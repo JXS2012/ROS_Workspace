@@ -1,9 +1,9 @@
 #include <ros/ros.h>
-#include "quadrotor.h"
-#include <boost/ref.hpp>
-quadrotor *hummingbird;
+#include "smartbird.h"
+//#include <boost/ref.hpp>
+smartbird *hummingbird;
 
-void timerCallback(const ros::TimerEvent&,quadrotor *hummingbird)
+void timerCallback(const ros::TimerEvent&)
 {
   hummingbird->drive();  
 }
@@ -16,10 +16,10 @@ int main(int argc, char** argv)
   ros::NodeHandle nh;
   ros::NodeHandle nh_private("~");
   //  quadrotor *hummingbird = new quadrotor(nh,nh_private);
-  hummingbird = new quadrotor(nh,nh_private);
+  hummingbird = new smartbird(nh,nh_private);
   printf("create hummingbird\n");
 
-  ros::Timer timer = nh.createTimer(ros::Duration(1.0/freq),boost::bind(timerCallback,_1,boost::ref(hummingbird)));
+  ros::Timer timer = nh.createTimer(ros::Duration(1.0/freq),timerCallback);
   printf("create timer\n");
   
   while (nh.ok() && !hummingbird->finish())

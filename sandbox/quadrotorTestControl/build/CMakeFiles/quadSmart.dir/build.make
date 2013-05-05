@@ -146,8 +146,9 @@ quadSmart_OBJECTS = \
 quadSmart_EXTERNAL_OBJECTS =
 
 ../bin/quadSmart: CMakeFiles/quadSmart.dir/src/quadSmart.o
-../bin/quadSmart: ../lib/libsmartbird.so
+../bin/quadSmart: ../lib/libhighbird.so
 ../bin/quadSmart: ../lib/libdummybird.so
+../bin/quadSmart: ../lib/libbirdeye.so
 ../bin/quadSmart: ../lib/libvector_computation.so
 ../bin/quadSmart: CMakeFiles/quadSmart.dir/build.make
 ../bin/quadSmart: CMakeFiles/quadSmart.dir/link.txt

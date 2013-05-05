@@ -278,19 +278,6 @@ rospack_gensrv/fast:
 .PHONY : rospack_gensrv/fast
 
 #=============================================================================
-# Target rules for targets named smartbird
-
-# Build rule for target.
-smartbird: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 smartbird
-.PHONY : smartbird
-
-# fast build rule for target.
-smartbird/fast:
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/build
-.PHONY : smartbird/fast
-
-#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -429,21 +416,6 @@ src/quadSmart.s:
 .PHONY : src/quadSmart.s
 
 # target to build an object file
-src/smartbird.o:
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/src/smartbird.o
-.PHONY : src/smartbird.o
-
-# target to preprocess a source file
-src/smartbird.i:
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/src/smartbird.i
-.PHONY : src/smartbird.i
-
-# target to generate assembly for a file
-src/smartbird.s:
-	$(MAKE) -f CMakeFiles/smartbird.dir/build.make CMakeFiles/smartbird.dir/src/smartbird.s
-.PHONY : src/smartbird.s
-
-# target to build an object file
 src/vector_computation.o:
 	$(MAKE) -f CMakeFiles/vector_computation.dir/build.make CMakeFiles/vector_computation.dir/src/vector_computation.o
 .PHONY : src/vector_computation.o
@@ -480,7 +452,6 @@ help:
 	@echo "... rospack_genmsg"
 	@echo "... rospack_genmsg_libexe"
 	@echo "... rospack_gensrv"
-	@echo "... smartbird"
 	@echo "... test"
 	@echo "... test-future"
 	@echo "... test-results"
@@ -499,9 +470,6 @@ help:
 	@echo "... src/quadSmart.o"
 	@echo "... src/quadSmart.i"
 	@echo "... src/quadSmart.s"
-	@echo "... src/smartbird.o"
-	@echo "... src/smartbird.i"
-	@echo "... src/smartbird.s"
 	@echo "... src/vector_computation.o"
 	@echo "... src/vector_computation.i"
 	@echo "... src/vector_computation.s"

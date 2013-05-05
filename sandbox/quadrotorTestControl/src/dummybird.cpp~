@@ -4,7 +4,7 @@ dummybird::dummybird(ros::NodeHandle nh, ros::NodeHandle nh_private):
   nh_(nh), 
   nh_private_(nh_private)
 {
-  ros::NodeHandle node  (nh_,"dummybird");
+  ros::NodeHandle node  (nh_);
 
   //control cmds publisher
   pub_thrust = node.advertise<std_msgs::Float64>("mav/cmd_thrust", 1000);
@@ -84,8 +84,8 @@ void dummybird::pid_hover_controller(pcl::PointXYZ e_p,pcl::PointXYZ e_v,pcl::Po
 {
   double acc_x_des, acc_y_des, acc_z_des;
   acc_x_des = -kp_hover.x*e_p.x - kd_hover.x*e_v.x - ki_hover.x*e_int.x;
-  acc_y_des = -kp_hover.y*e_p.x - kd_hover.y*e_v.y - ki_hover.y*e_int.y;
-  acc_z_des = -kp_hover.z*e_p.x - kd_hover.z*e_v.z - ki_hover.z*e_int.z;
+  acc_y_des = -kp_hover.y*e_p.y - kd_hover.y*e_v.y - ki_hover.y*e_int.y;
+  acc_z_des = -kp_hover.z*e_p.z - kd_hover.z*e_v.z - ki_hover.z*e_int.z;
 
   acc_des2control(acc_x_des,acc_y_des,acc_z_des,psi);
 

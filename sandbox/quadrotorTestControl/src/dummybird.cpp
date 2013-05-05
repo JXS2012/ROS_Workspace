@@ -163,3 +163,18 @@ void dummybird::off()
 
   ROS_INFO("Motor off\n");
 }
+
+float dummybird::getLog_pitch(int i)
+{
+  return pitch_log[i];
+}
+
+float dummybird::getLog_roll(int i)
+{
+  return roll_log[i];
+}
+
+float dummybird::getLog_thrust(int i)
+{
+  return thrust_log[i];
+}

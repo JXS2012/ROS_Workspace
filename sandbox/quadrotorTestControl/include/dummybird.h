@@ -32,6 +32,7 @@ class dummybird
   ros::ServiceClient client_GetMotorsOnOff;
 
   float thrust_in,pitch_in,roll_in,yaw_in;
+  std::vector<float> pitch_log,roll_log,thrust_log;
 
   pcl::PointXYZ kd_hover,kp_hover,ki_hover,kd_path,kp_path;
 
@@ -44,7 +45,6 @@ class dummybird
   double interpolate_thrust(double);
 
  public:
-  std::vector<float> pitch_log,roll_log,thrust_log;
 
   dummybird(ros::NodeHandle nh, ros::NodeHandle nh_private);
   virtual ~dummybird();
@@ -57,4 +57,8 @@ class dummybird
   void pid_path_controller(pcl::PointXYZ,pcl::PointXYZ,pcl::PointXYZ,double);
   //direct control, takes in desired accelaration in x,y,z and angle psi
   void direct_drive(double,double,double,double);
+
+  float getLog_pitch(int);
+  float getLog_roll(int);
+  float getLog_thrust(int);
 };

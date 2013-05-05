@@ -178,7 +178,7 @@ void highbird::write_log()
   if (pFile!=NULL)
     {
       for (int i = 0; i<eye->getLogSize();i++)
-	fprintf(pFile, "x %.3f y %.3f z %.3f phi %.3f theta %.3f psi %.3f roll %.6f pitch %.6f thrust %.6f\n", eye->getLog_x(i), eye->getLog_y(i), eye->getLog_z(i), eye->getLog_phi(i),eye->getLog_theta(i),eye->getLog_psi(i), dummy->roll_log[i], dummy->pitch_log[i], dummy->thrust_log[i]);
+	fprintf(pFile, "x %.3f y %.3f z %.3f phi %.3f theta %.3f psi %.3f roll %.6f pitch %.6f thrust %.6f\n", eye->getLog_x(i), eye->getLog_y(i), eye->getLog_z(i), eye->getLog_phi(i),eye->getLog_theta(i),eye->getLog_psi(i), dummy->getLog_roll(i), dummy->getLog_pitch(i), dummy->getLog_thrust(i));
     }
   
 }

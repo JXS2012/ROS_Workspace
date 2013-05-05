@@ -39,6 +39,7 @@ class dummybird
 
   void init_pid();
   void init_parameters();
+  //take in desired acc and current psi angle, calculate control output to quadrotor
   void acc_des2control(double,double,double,double);
   double interpolate_thrust(double);
 
@@ -50,7 +51,10 @@ class dummybird
 
   void on();
   void off();
+  //hover controller, takes in position error, velocity error, integrated error and psi angle
   void pid_hover_controller(pcl::PointXYZ,pcl::PointXYZ,pcl::PointXYZ,double);
+  //path follower controller, takes in position error, velocity error, path point accelaration and psi angle
   void pid_path_controller(pcl::PointXYZ,pcl::PointXYZ,pcl::PointXYZ,double);
+  //direct control, takes in desired accelaration in x,y,z and angle psi
   void direct_drive(double,double,double,double);
 };

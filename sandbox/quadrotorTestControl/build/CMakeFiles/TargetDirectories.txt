@@ -12,7 +12,6 @@
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/rospack_genmsg.dir
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/rospack_genmsg_libexe.dir
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/rospack_gensrv.dir
-/home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/smartbird.dir
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/test.dir
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/test-future.dir
 /home/jianxin/my_ros_workspace/sandbox/quadrotorTestControl/build/CMakeFiles/test-results.dir

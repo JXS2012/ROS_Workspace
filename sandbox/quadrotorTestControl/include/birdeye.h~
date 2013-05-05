@@ -59,6 +59,8 @@ class birdeye
   void resetIntError();
   void calculate_position_velocity_error(); //used for path controll
 
+  pcl::PointXYZ getShiftedOrigin();
+  pcl::PointXYZ getStartPoint();
   pcl::PointXYZ getCurrentPoint();
   pcl::PointXYZ getOriginPoint();
   pcl::PointXYZ getE_p();
@@ -77,4 +79,5 @@ class birdeye
   float getLog_theta(int);
   float getLog_psi(int);
 
+  int getLogSize();
 };

@@ -34,6 +34,9 @@ class birdeye
   pcl::PointXYZ e_p,e_v,acc_t,currentVel,intError;
   double phi,psi,theta;
   std::vector<float> x_log, y_log, z_log, phi_log, theta_log, psi_log;
+  //handle vicon lost
+  int freezeCounter;
+  bool lostVicon;
 
   //functions
   //initiation
@@ -48,6 +51,9 @@ class birdeye
 
   //flight log record
   void flightLog();
+
+  //vicon lost handle
+  void viconLostHandle();
 
  public:
   birdeye(ros::NodeHandle nh, ros::NodeHandle nh_private);
